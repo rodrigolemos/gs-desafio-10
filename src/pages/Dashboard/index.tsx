@@ -31,7 +31,7 @@ const Dashboard: React.FC = () => {
         const response = await api.get('/foods');
         setFoods(response.data);
       } catch {
-        // console.log('Get foods failed');
+        console.log('Get foods failed');
       }
     }
 
@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
 
       setFoods([...foods, objFood]);
     } catch (err) {
-      // console.log(err);
+      console.log('Add food failed');
     }
   }
 
@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
         available: editingFood.available,
       });
     } catch {
-      // console.log(err);
+      console.log('Update food failed');
     }
   }
 
